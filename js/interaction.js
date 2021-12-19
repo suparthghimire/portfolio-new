@@ -17,8 +17,8 @@ theme_toggle.addEventListener("click", () => {
   theme_toggle.classList.toggle("toggler__btn-active");
   current_theme = !dark_mode ? "" : "dark-mode";
   localStorage.setItem("sng_theme", JSON.stringify(current_theme));
-
-  const audio = new Audio("../sounds/tick.mp3");
+  const path = window.location.origin + "/sounds/tick.mp3";
+  const audio = new Audio(path);
   audio.play();
 });
 
