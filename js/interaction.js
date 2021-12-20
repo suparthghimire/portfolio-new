@@ -17,7 +17,8 @@ theme_toggle.addEventListener("click", () => {
   theme_toggle.classList.toggle("toggler__btn-active");
   current_theme = !dark_mode ? "" : "dark-mode";
   localStorage.setItem("sng_theme", JSON.stringify(current_theme));
-  const path = window.location.origin + "/sounds/tick.mp3";
+  // TODO: Add Path for Production
+  const path = "../sounds/tick.mp3";
   const audio = new Audio(path);
   audio.play();
 });
@@ -29,4 +30,11 @@ const header_nav = document.querySelector("#header-nav");
 nav_toggle.addEventListener("click", () => {
   nav_toggle_icon.classList.toggle("nav-toggler__icon-active");
   header_nav.classList.toggle("header__nav-active");
+  if (header_nav.classList.contains("header__nav-active")) {
+    document.querySelector("body").style.overflowY = "hidden";
+  } else {
+    document.querySelector("body").style.overflowY = "auto";
+  }
 });
+
+document.addEventListener("scroll", (e) => {});
