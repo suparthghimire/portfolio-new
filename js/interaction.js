@@ -18,7 +18,8 @@ theme_toggle.addEventListener("click", () => {
   current_theme = !dark_mode ? "" : "dark-mode";
   localStorage.setItem("sng_theme", JSON.stringify(current_theme));
   // TODO: Add Path for Production
-  const path = "../sounds/tick.mp3";
+  const url = "https://suparthghimire.github.io/portfolio-new/sounds/tick.mp3";
+  const path = url;
   const audio = new Audio(path);
   audio.play();
 });

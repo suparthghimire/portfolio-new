@@ -81,15 +81,15 @@ ul {
 }
 
 .text-primary {
-    color: rgb(var(--color-primary));
+    color: rgb(var(--color-primary)) !important;
 }
 
 .text-secondary {
-    color: rgb(var(--color-secondary));
+    color: rgb(var(--color-secondary)) !important;
 }
 
 .font-serif {
-    font-family: var(--font-serif);
+    font-family: var(--font-serif) !important;
 }
 
 .divider {
