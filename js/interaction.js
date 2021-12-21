@@ -30,11 +30,18 @@ const header_nav = document.querySelector("#header-nav");
 nav_toggle.addEventListener("click", () => {
   nav_toggle_icon.classList.toggle("nav-toggler__icon-active");
   header_nav.classList.toggle("header__nav-active");
-  if (header_nav.classList.contains("header__nav-active")) {
-    document.querySelector("body").style.overflowY = "hidden";
-  } else {
-    document.querySelector("body").style.overflowY = "auto";
-  }
+  // if (header_nav.classList.contains("header__nav-active")) {
+  //   document.querySelector("body").style.overflowY = "hidden";
+  // } else {
+  //   document.querySelector("body").style.overflowY = "auto";
+  // }
+});
+const menu_items = document.querySelectorAll(".nav-list__nav-link");
+menu_items.forEach((item) => {
+  item.addEventListener("click", () => {
+    header_nav.classList.remove("header__nav-active");
+    nav_toggle_icon.classList.remove("nav-toggler__icon-active");
+  });
 });
 
 document.addEventListener("scroll", (e) => {});
